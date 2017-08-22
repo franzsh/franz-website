@@ -41,8 +41,8 @@
     "globals": ["document"]
   },
   "now": {
-    "name": "franz-staging",
-    "alias": "staging-web.franz.sh"
+    "name": "franz",
+    "alias": "franz.sh"
   },
   "engines": {
     "node": "8.2.1"
