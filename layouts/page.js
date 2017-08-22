@@ -1,6 +1,7 @@
 'use strict'
 
 import Head from 'next/head'
+import PropTypes from 'prop-types'
 
 import pkg from './../package'
 
@@ -89,5 +90,9 @@ const Page = ({ children }) =>
       }
     `}</style>
   </main>
+
+Page.propTypes = {
+  children: PropTypes.node.isRequired
+}
 
 export default Page
