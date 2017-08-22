@@ -30,12 +30,16 @@ const viewSource = event => {
 const Page = ({ children }) =>
   <main onDoubleClick={viewSource}>
     <Head>
-      <title>franz — {pkg.description}</title>
-      // Meta
+      <title>
+        franz — {pkg.description}
+      </title>
+
+      {/* Meta */}
       <meta name="description" content={pkg.description} />
       <meta name="keywords" content={pkg.keywords.join(', ')} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      // Twitter Meta
+
+      {/* Twitter Meta */}
       <meta name="twitter:title" content="franz" />
       <meta name="twitter:description" content={pkg.description} />
       <meta name="twitter:site" content="@franzsh" />
@@ -45,7 +49,8 @@ const Page = ({ children }) =>
         property="twitter:image:src"
         content="https://franz.sh/static/cover.png"
       />
-      // Facebook Meta
+
+      {/* Facebook Meta */}
       <meta property="og:title" content="franz" />
       <meta property="og:description" content={pkg.description} />
       <meta property="og:site_name" content="franz" />

@@ -6,17 +6,39 @@
   "repository": "https://github.com/franzsh/franz-website",
   "author": "Bu Kinoshita <bukinoshita@gmail.com>",
   "license": "MIT",
-  "keywords": ["franz", "benchmarking"],
+  "keywords": [
+    "franz",
+    "benchmarking"
+  ],
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "deploy": "now & now alias"
+    "deploy": "now & now alias",
+    "test": "xo --quiet"
   },
   "dependencies": {
     "next": "^3.0.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-react": "^7.3.0",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "extends": [
+      "prettier",
+      "prettier/react",
+      "plugin:react/recommended"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": 0
+    },
+    "globals": [
+      "document"
+    ]
   },
   "now": {
     "name": "franz",
