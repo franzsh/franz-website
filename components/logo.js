@@ -1,6 +1,8 @@
 'use stric'
 
-export default ({ size = '100px', color = '#000' }) =>
+import PropTypes from 'prop-types'
+
+const Logo = ({ size = '100px', color = '#000' }) =>
   <svg width={size} viewBox="0 0 165 56">
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-638.000000, -484.000000)" fill={color}>
@@ -18,3 +20,10 @@ export default ({ size = '100px', color = '#000' }) =>
       </g>
     </g>
   </svg>
+
+Logo.propTypes = {
+  size: PropTypes.string,
+  color: PropTypes.string
+}
+
+export default Logo
