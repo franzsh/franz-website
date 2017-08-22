@@ -1,0 +1,26 @@
+{
+  "name": "franz-website",
+  "version": "0.0.0",
+  "description": "your benchmarking assistant",
+  "main": "index.js",
+  "repository": "https://github.com/franzsh/franz-website",
+  "author": "Bu Kinoshita <bukinoshita@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^3.0.6",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "now": {
+    "name": "franz",
+    "alias": "franz.sh"
+  },
+  "engines": {
+    "node": "8.2.1"
+  }
+}
