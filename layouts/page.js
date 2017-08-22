@@ -39,6 +39,8 @@ const Page = ({ children }) =>
       <meta name="description" content={pkg.description} />
       <meta name="keywords" content={pkg.keywords.join(', ')} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="apple-touch-icon" href="/static/icon.png" />
+      <link rel="icon" href="/static/icon.png" type="image/png" />
 
       {/* Twitter Meta */}
       <meta name="twitter:title" content="franz" />
