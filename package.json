@@ -1,6 +1,6 @@
 {
   "name": "franz-website",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "your benchmarking assistant",
   "main": "index.js",
   "repository": "https://github.com/franzsh/franz-website",
@@ -8,7 +8,12 @@
   "license": "MIT",
   "keywords": [
     "franz",
-    "benchmarking"
+    "benchmarking",
+    "assistant",
+    "code",
+    "CI",
+    "continuous",
+    "integration"
   ],
   "scripts": {
     "dev": "next",
@@ -29,21 +34,15 @@
     "xo": "^0.18.2"
   },
   "xo": {
-    "extends": [
-      "prettier",
-      "prettier/react",
-      "plugin:react/recommended"
-    ],
+    "extends": ["prettier", "prettier/react", "plugin:react/recommended"],
     "rules": {
       "react/react-in-jsx-scope": 0
     },
-    "globals": [
-      "document"
-    ]
+    "globals": ["document"]
   },
   "now": {
-    "name": "franz",
-    "alias": "franz.sh"
+    "name": "franz-staging",
+    "alias": "staging.franz.sh"
   },
   "engines": {
     "node": "8.2.1"
