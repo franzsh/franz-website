@@ -6,6 +6,7 @@
   "repository": "https://github.com/franzsh/franz-website",
   "author": "Bu Kinoshita <bukinoshita@gmail.com>",
   "license": "MIT",
+  "keywords": ["franz", "benchmarking"],
   "scripts": {
     "dev": "next",
     "build": "next build",
