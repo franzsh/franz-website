@@ -42,7 +42,7 @@
   },
   "now": {
     "name": "franz-staging",
-    "alias": "staging.franz.sh"
+    "alias": "staging-web.franz.sh"
   },
   "engines": {
     "node": "8.2.1"
