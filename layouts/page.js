@@ -43,8 +43,11 @@ const Page = ({ children }) =>
       <link rel="icon" href="/static/icon.png" type="image/png" />
 
       {/* Twitter Meta */}
-      <meta name="twitter:title" content="franz" />
-      <meta name="twitter:description" content={pkg.description} />
+      <meta name="twitter:title" content={`franz — ${pkg.description}`} />
+      <meta
+        name="twitter:description"
+        content="franz generates peak traffic for each of your endpoints in a per commit basis, so that you can see if your endpoints are getting better or worse throughout time."
+      />
       <meta name="twitter:site" content="@franzsh" />
       <meta name="twitter:creator" content="@franzsh" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -54,8 +57,11 @@ const Page = ({ children }) =>
       />
 
       {/* Facebook Meta */}
-      <meta property="og:title" content="franz" />
-      <meta property="og:description" content={pkg.description} />
+      <meta property="og:title" content={`franz — ${pkg.description}`} />
+      <meta
+        property="og:description"
+        content="franz generates peak traffic for each of your endpoints in a per commit basis, so that you can see if your endpoints are getting better or worse throughout time."
+      />
       <meta property="og:site_name" content="franz" />
       <meta property="og:url" content="https://franzh.sh" />
       <meta property="og:type" content="website" />
