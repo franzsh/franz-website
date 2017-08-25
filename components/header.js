@@ -4,12 +4,13 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 
 import Logo from './logo'
+import { colors } from './../ui/theme'
 
-const Header = ({ children, logoHref = '/' }) =>
+const Header = ({ children, logoHref = '/', color = colors.white }) =>
   <header>
     <Link href={logoHref}>
       <h1>
-        <Logo color="white" size="70px" />
+        <Logo color={color} size="70px" />
       </h1>
     </Link>
 
@@ -33,7 +34,8 @@ const Header = ({ children, logoHref = '/' }) =>
 
 Header.propTypes = {
   children: PropTypes.node.isRequired,
-  logoHref: PropTypes.string
+  logoHref: PropTypes.string,
+  color: PropTypes.string
 }
 
 export default Header

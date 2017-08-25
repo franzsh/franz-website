@@ -17,19 +17,8 @@ if (global.document) {
   }
 }
 
-const viewSource = event => {
-  const allowed = ['P', 'H1', 'SPAN']
-
-  if (allowed.includes(event.target.tagName)) {
-    return
-  }
-
-  document.location = pkg.repository
-  event.preventDefault()
-}
-
 const Page = ({ children }) =>
-  <main onDoubleClick={viewSource}>
+  <main>
     <Head>
       <title>
         franz — {pkg.description}

@@ -1,13 +1,17 @@
 'use strict'
 
 import Link from 'next/link'
+import classNames from 'classnames'
+import PropTypes from 'prop-types'
 
 import ButtonLink from './../ui/button-link'
 import { colors, typography, phone } from './../ui/theme'
 
-const Menu = () => {
+const Menu = ({ inversed = false }) => {
+  const cl = classNames({ inversed })
+
   return (
-    <ul>
+    <ul className={cl}>
       <li>
         <Link href="/features">
           <span>Features</span>
@@ -27,7 +31,11 @@ const Menu = () => {
       </li>
 
       <li>
-        <ButtonLink href="/add-project" inversed={true}>
+        <ButtonLink
+          href="/add-project"
+          style={inversed ? null : 'primary'}
+          inversed={inversed}
+        >
           Get started
         </ButtonLink>
       </li>
@@ -51,11 +59,19 @@ const Menu = () => {
 
         span {
           text-transform: lowercase;
-          color: ${colors.white};
+          color: ${colors.black};
           transition: all 0.25s ease-out;
         }
 
         span:hover {
+          color: rgba(${colors.blackHover});
+        }
+
+        .inversed span {
+          color: ${colors.white};
+        }
+
+        .inversed span:hover {
           color: rgba(${colors.whiteHover});
         }
 
@@ -65,6 +81,10 @@ const Menu = () => {
       `}</style>
     </ul>
   )
+}
+
+Menu.propTypes = {
+  inversed: PropTypes.bool
 }
 
 export default Menu

@@ -16,7 +16,7 @@ import { colors, typography, phone } from './../ui/theme'
 const Home = () =>
   <Page>
     <Header>
-      <Menu />
+      <Menu inversed={true} />
     </Header>
 
     <section className="inversed">

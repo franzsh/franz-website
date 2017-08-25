@@ -24,8 +24,10 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "is-github-repo": "^0.0.2",
     "next": "^3.0.6",
     "prop-types": "^15.5.10",
+    "query-string": "^5.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
@@ -35,12 +37,18 @@
     "xo": "^0.18.2"
   },
   "xo": {
-    "extends": ["prettier", "prettier/react", "plugin:react/recommended"],
+    "extends": [
+      "prettier",
+      "prettier/react",
+      "plugin:react/recommended"
+    ],
     "rules": {
       "react/react-in-jsx-scope": 0,
       "react/no-unescaped-entities": 0
     },
-    "globals": ["document"]
+    "globals": [
+      "document"
+    ]
   },
   "now": {
     "name": "franz-staging",

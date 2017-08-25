@@ -50,6 +50,7 @@ const ButtonLink = ({
             color: ${colors.white};
             background-color: ${colors.title};
             transition: all 0.25s ease-out;
+            letter-spacing: 0.05rem;
           }
 
           .primary {
@@ -57,7 +58,7 @@ const ButtonLink = ({
           }
 
           .primary:hover {
-            background-color: ${colors.primaryHover};
+            background-color: rgba(${colors.blackHover});
           }
 
           .inversed {
@@ -83,6 +84,8 @@ const ButtonLink = ({
           .block {
             display: block;
             width: 100%;
+            padding-top: 6px;
+            padding-bottom: 6px;
           }
 
           @media ${phone} {

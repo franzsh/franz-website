@@ -4,8 +4,10 @@ export const colors = {
   white: '#FFFFFF',
   whiteHover: '255, 255, 255, .75',
   black: '#000000',
+  blackHover: '0, 0, 0, .75',
   primary: '#00000',
-  secondary: '#868E96'
+  secondary: '#868E96',
+  border: '#EEEEEE'
 }
 
 export const typography = {
