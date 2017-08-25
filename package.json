@@ -23,6 +23,7 @@
     "test": "xo --quiet"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "next": "^3.0.6",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
@@ -36,7 +37,8 @@
   "xo": {
     "extends": ["prettier", "prettier/react", "plugin:react/recommended"],
     "rules": {
-      "react/react-in-jsx-scope": 0
+      "react/react-in-jsx-scope": 0,
+      "react/no-unescaped-entities": 0
     },
     "globals": ["document"]
   },

@@ -70,6 +70,13 @@ const Page = ({ children }) =>
 
     {children}
 
+    <style jsx>{`
+      main {
+        max-width: 100%;
+        overflow: hidden;
+      }
+    `}</style>
+
     <style jsx global>{`
       * {
         padding: 0;
