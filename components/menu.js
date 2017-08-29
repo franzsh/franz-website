@@ -50,7 +50,8 @@ const Menu = ({ inversed = false }) => {
           margin-left: 20px;
           margin-right: 20px;
           cursor: pointer;
-          font-size: ${typography.f14};
+          font-size: ${typography.f11};
+          font-weight: ${typography.bold};
         }
 
         li:last-child {
@@ -58,7 +59,7 @@ const Menu = ({ inversed = false }) => {
         }
 
         span {
-          text-transform: lowercase;
+          text-transform: uppercase;
           color: ${colors.black};
           transition: all 0.25s ease-out;
         }
