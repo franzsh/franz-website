@@ -87,7 +87,7 @@ class AddProject extends Component {
         <style jsx>{`
           form {
             max-width: 300px;
-            margin: 100px auto;
+            margin: 75px auto;
             text-align: center;
           }
         `}</style>
