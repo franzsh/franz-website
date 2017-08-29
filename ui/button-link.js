@@ -71,7 +71,7 @@ const ButtonLink = ({
           }
 
           .cta {
-            font-size: ${typography.f12};
+            font-size: ${typography.f11};
             padding: 8px 30px;
           }
 

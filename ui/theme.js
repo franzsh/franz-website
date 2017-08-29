@@ -13,6 +13,7 @@ export const colors = {
 export const typography = {
   f8: '.5rem',
   f10: '.6rem',
+  f11: '.65rem',
   f12: '.75rem',
   f14: '.85rem',
   f16: '1rem',
