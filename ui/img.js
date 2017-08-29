@@ -3,12 +3,12 @@
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-const Img = ({ src, shadow = true, alt }) => {
+const Img = ({ src, shadow = true, alt, customStyle }) => {
   const imgClasses = classNames({ shadow })
 
   return (
     <div>
-      <img className={imgClasses} src={src} alt={alt} />
+      <img className={imgClasses} src={src} alt={alt} style={customStyle} />
 
       <style jsx>{`
         img {

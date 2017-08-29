@@ -118,6 +118,29 @@ const Home = () =>
       </Container>
     </section>
 
+    <section className="cli">
+      <Container>
+        <h2>
+          <ServerIcon />
+          <span>franz CLI</span>
+        </h2>
+
+        <p>the command line interface for franz.</p>
+
+        <Img
+          src="https://images.unsplash.com/photo-1497384401032-2182d2687715?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg="
+          alt=""
+          customStyle={{
+            margin: '50px auto 30px',
+            maxWidth: '500px',
+            display: 'block'
+          }}
+        />
+
+        <code>$ npm install -g franz</code>
+      </Container>
+    </section>
+
     <Footer />
 
     <style jsx>{`
@@ -133,9 +156,14 @@ const Home = () =>
         font-weight: ${typography.semibold};
       }
 
+      section {
+        border-bottom: 1px solid ${colors.border};
+        min-height: 650px;
+      }
+
       .inversed {
         margin-top: -120px;
-        background-color: #000;
+        background-color: ${colors.black};
       }
 
       h2 {
@@ -155,6 +183,41 @@ const Home = () =>
         color: ${colors.secondary};
         font-size: ${typography.f14};
         line-height: 2rem;
+      }
+
+      .cli {
+        max-width: 100%;
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        padding: 50px;
+      }
+
+      .cli h2,
+      .cli p {
+        text-align: center;
+      }
+
+      code {
+        display: block;
+        background-color: ${colors.border};
+        padding: 20px;
+        color: ${colors.secondary};
+        font-family: monospace;
+        font-weight: ${typography.bold};
+        border-radius: 2px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-x: auto;
+        font-size: ${typography.f16};
+        text-align: center;
       }
 
       @media ${phone} {
