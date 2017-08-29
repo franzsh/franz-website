@@ -50,7 +50,7 @@ const ButtonLink = ({
             color: ${colors.white};
             background-color: ${colors.title};
             transition: all 0.25s ease-out;
-            letter-spacing: 0.05rem;
+            letter-spacing: 0.06rem;
           }
 
           .primary {
