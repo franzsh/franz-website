@@ -45,7 +45,7 @@
       "react/react-in-jsx-scope": 0,
       "react/no-unescaped-entities": 0
     },
-    "globals": ["document"]
+    "globals": ["document", "window"]
   },
   "now": {
     "name": "franz-staging",
@@ -57,6 +57,9 @@
   "babel": {
     "presets": ["next/babel"],
     "env": {
+      "development": {
+        "plugins": ["inline-dotenv"]
+      },
       "staging": {
         "plugins": ["inline-dotenv"]
       },

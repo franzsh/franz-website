@@ -4,7 +4,6 @@ import { Component } from 'react'
 import queryString from 'query-string'
 import isGithubRepo from 'is-github-repo'
 import PropTypes from 'prop-types'
-import Router from 'next/router'
 
 import Page from './../layouts/page'
 import Header from './../components/header'
@@ -39,10 +38,7 @@ class AddProject extends Component {
     if (isGit) {
       const query = { repo: repository, build: 1 }
 
-      Router.push({
-        pathname: process.env.APP_URL,
-        search: queryString.stringify(query)
-      })
+      window.location = `${process.env.APP_URL}?${queryString.stringify(query)}`
     }
   }
 
