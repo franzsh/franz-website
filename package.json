@@ -23,13 +23,16 @@
     "test": "xo --quiet"
   },
   "dependencies": {
+    "babel-plugin-inline-dotenv": "^1.1.1",
+    "babel-plugin-transform-inline-environment-variables": "^0.2.0",
     "classnames": "^2.2.5",
     "is-github-repo": "^0.0.2",
     "next": "^3.0.6",
     "prop-types": "^15.5.10",
     "query-string": "^5.0.0",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "request": "^2.81.0"
   },
   "devDependencies": {
     "eslint-config-prettier": "^2.3.0",
@@ -37,22 +40,27 @@
     "xo": "^0.18.2"
   },
   "xo": {
-    "extends": [
-      "prettier",
-      "prettier/react",
-      "plugin:react/recommended"
-    ],
+    "extends": ["prettier", "prettier/react", "plugin:react/recommended"],
     "rules": {
       "react/react-in-jsx-scope": 0,
       "react/no-unescaped-entities": 0
     },
-    "globals": [
-      "document"
-    ]
+    "globals": ["document"]
   },
   "now": {
     "name": "franz-staging",
     "alias": "staging-web.franz.sh"
+  },
+  "babel": {
+    "presets": ["next/babel"],
+    "env": {
+      "development": {
+        "plugins": ["inline-dotenv"]
+      },
+      "production": {
+        "plugins": ["transform-inline-environment-variables"]
+      }
+    }
   },
   "engines": {
     "node": "8.2.1"
