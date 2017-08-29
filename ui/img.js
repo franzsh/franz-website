@@ -35,7 +35,8 @@ const Img = ({ src, shadow = true, alt, customStyle }) => {
 Img.propTypes = {
   src: PropTypes.string.isRequired,
   shadow: PropTypes.bool,
-  alt: PropTypes.string
+  alt: PropTypes.string,
+  customStyle: PropTypes.object
 }
 
 export default Img
