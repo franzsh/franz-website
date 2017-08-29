@@ -49,12 +49,15 @@
   },
   "now": {
     "name": "franz-staging",
-    "alias": "staging-web.franz.sh"
+    "alias": "staging-web.franz.sh",
+    "env": {
+      "NODE_ENV": "staging"
+    }
   },
   "babel": {
     "presets": ["next/babel"],
     "env": {
-      "development": {
+      "staging": {
         "plugins": ["inline-dotenv"]
       },
       "production": {
