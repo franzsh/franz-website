@@ -19,6 +19,7 @@ const ProductTitle = ({ product, description }) =>
 
     <style jsx>{`
       .page-title {
+        margin-top: 125px;
         margin-bottom: 25px;
         text-align: center;
         text-transform: lowercase;
