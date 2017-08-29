@@ -74,7 +74,7 @@ class AddProject extends Component {
                 type="submit"
                 style="primary"
                 block={true}
-                customStyle={{ marginTop: '30px' }}
+                customStyle={{ marginTop: '40px' }}
               >
                 Add project
               </Button>
