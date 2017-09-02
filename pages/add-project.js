@@ -21,6 +21,10 @@ class AddProject extends Component {
   constructor() {
     super()
 
+    this.state = {
+      repoInvalid: false
+    }
+
     this.onSubmitAddProject = this.onSubmitAddProject.bind(this)
     this.handleInputChange = this.handleInputChange.bind(this)
   }
@@ -33,6 +37,11 @@ class AddProject extends Component {
     e.preventDefault()
 
     const { repository } = this.state
+
+    if (!repository) {
+      return this.setState({ repoInvalid: true })
+    }
+
     const isGit = isGithubRepo(repository)
 
     if (isGit) {
@@ -62,6 +71,7 @@ class AddProject extends Component {
                 placeholder="organization/repository"
                 name="repository"
                 handleInputChange={this.handleInputChange}
+                isInvalid={this.state.repoInvalid}
               />
 
               <Button

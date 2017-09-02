@@ -1,6 +1,7 @@
 'use strict'
 
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 import { colors, typography } from './theme'
 
@@ -11,7 +12,8 @@ const Input = ({
   inputRef,
   inputValue,
   align = 'left',
-  handleInputChange
+  handleInputChange,
+  isInvalid
 }) => {
   const onInputChange = value => {
     if (handleInputChange) {
@@ -19,10 +21,17 @@ const Input = ({
     }
   }
 
+  const inputClasses = classNames({
+    left: align === 'left',
+    center: align === 'center',
+    right: align === 'right',
+    isInvalid
+  })
+
   return (
     <div>
       <input
-        className={align}
+        className={inputClasses}
         type={type}
         name={name}
         placeholder={placeholder}
@@ -71,9 +80,45 @@ const Input = ({
           color: ${colors.secondary};
         }
 
+        .isInvalid {
+          border-bottom: 1px solid ${colors.danger};
+        }
+
+        .isInvalid::-webkit-input-placeholder {
+          color: ${colors.danger};
+        }
+
+        .isInvalid::-moz-placeholder {
+          color: ${colors.danger};
+        }
+
+        .isInvalid:-ms-input-placeholder {
+          color: ${colors.danger};
+        }
+
+        .isInvalid:-moz-placeholder {
+          color: ${colors.danger};
+        }
+
         input:focus {
           outline: transparent;
           border-color: ${colors.black};
+        }
+
+        input:focus::-webkit-input-placeholder {
+          color: ${colors.secondary};
+        }
+
+        input:focus::-moz-placeholder {
+          color: ${colors.secondary};
+        }
+
+        input:focus:-ms-input-placeholder {
+          color: ${colors.secondary};
+        }
+
+        input:focus:-moz-placeholder {
+          color: ${colors.secondary};
         }
       `}</style>
     </div>

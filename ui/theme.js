@@ -7,7 +7,8 @@ export const colors = {
   blackHover: '0, 0, 0, .75',
   primary: '#00000',
   secondary: '#868E96',
-  border: '#e6edf4'
+  border: '#e6edf4',
+  danger: '#F43F66'
 }
 
 export const typography = {
