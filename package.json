@@ -31,8 +31,7 @@
     "prop-types": "^15.5.10",
     "query-string": "^5.0.0",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "request": "^2.81.0"
+    "react-dom": "^15.6.1"
   },
   "devDependencies": {
     "eslint-config-prettier": "^2.3.0",
@@ -40,12 +39,19 @@
     "xo": "^0.18.2"
   },
   "xo": {
-    "extends": ["prettier", "prettier/react", "plugin:react/recommended"],
+    "extends": [
+      "prettier",
+      "prettier/react",
+      "plugin:react/recommended"
+    ],
     "rules": {
       "react/react-in-jsx-scope": 0,
       "react/no-unescaped-entities": 0
     },
-    "globals": ["document", "window"]
+    "globals": [
+      "document",
+      "window"
+    ]
   },
   "now": {
     "name": "franz-staging",
@@ -55,16 +61,24 @@
     }
   },
   "babel": {
-    "presets": ["next/babel"],
+    "presets": [
+      "next/babel"
+    ],
     "env": {
       "development": {
-        "plugins": ["inline-dotenv"]
+        "plugins": [
+          "inline-dotenv"
+        ]
       },
       "staging": {
-        "plugins": ["inline-dotenv"]
+        "plugins": [
+          "inline-dotenv"
+        ]
       },
       "production": {
-        "plugins": ["transform-inline-environment-variables"]
+        "plugins": [
+          "transform-inline-environment-variables"
+        ]
       }
     }
   },
