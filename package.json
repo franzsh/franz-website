@@ -40,50 +40,33 @@
     "xo": "^0.18.2"
   },
   "xo": {
-    "extends": [
-      "prettier",
-      "prettier/react",
-      "plugin:react/recommended"
-    ],
+    "extends": ["prettier", "prettier/react", "plugin:react/recommended"],
     "rules": {
       "react/react-in-jsx-scope": 0,
       "react/no-unescaped-entities": 0
     },
-    "globals": [
-      "document",
-      "window"
-    ]
+    "globals": ["document", "window"]
   },
   "now": {
     "name": "franz-staging",
     "alias": "staging-web.franz.sh",
     "env": {
       "NODE_ENV": "staging"
-    }
+    },
+    "dotenv": ".env"
   },
   "babel": {
-    "presets": [
-      "next/babel"
-    ],
+    "presets": ["next/babel"],
     "env": {
       "development": {
-        "plugins": [
-          "inline-dotenv"
-        ]
+        "plugins": ["inline-dotenv"]
       },
       "staging": {
-        "plugins": [
-          "inline-dotenv"
-        ]
+        "plugins": ["inline-dotenv"]
       },
       "production": {
-        "plugins": [
-          "transform-inline-environment-variables"
-        ]
+        "plugins": ["transform-inline-environment-variables"]
       }
     }
-  },
-  "engines": {
-    "node": "8.2.1"
   }
 }
